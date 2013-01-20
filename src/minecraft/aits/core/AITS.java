@@ -37,7 +37,7 @@ public class AITS {
 			"AITS");
 
 	// Says where the client and server 'proxy' code is loaded.
-	@SidedProxy(clientSide = "AITS.core.client.ClientProxy", serverSide = "AITS.core.common.CommonProxy")
+	@SidedProxy(clientSide = "aits.core.client.ClientProxy", serverSide = "aits.core.common.CommonProxy")
 	public static CommonProxy proxy;
 
 	@PreInit
