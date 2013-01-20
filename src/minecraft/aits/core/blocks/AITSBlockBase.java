@@ -1,4 +1,5 @@
 package aits.core.blocks;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import aits.core.AITS;
@@ -11,8 +12,7 @@ public class AITSBlockBase extends Block {
 		this.setCreativeTab(AITS.tabAITS);
 	}
 
-	public String getTextureFile () {
+	public String getTextureFile() {
 		return CommonProxy.BLOCK_PNG;
 	}
 }
-	

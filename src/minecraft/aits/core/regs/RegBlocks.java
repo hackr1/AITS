@@ -4,8 +4,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 
 public class RegBlocks {
 
-	public static void register(FMLInitializationEvent event)
-	{
-	
+	public static void register(FMLInitializationEvent event) {
+
 	}
 }
