@@ -5,7 +5,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IGuiHandler;
 
 public class CommonProxy implements IGuiHandler {
-	public static String ITEMS_PNG = "/aits/textures/items.png";
+	public static String ITEMS_PNG = "/aits/textures/metals.png";
 	public static String BLOCK_PNG = "/aits/textures/blocks.png";
 
 	public void registerRenderers() {
