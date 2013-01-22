@@ -43,7 +43,6 @@ public class AITS {
 	@Init
 	public void load(FMLInitializationEvent event) {
 		proxy.registerRenderers();
-		System.out.println("System.out.println Works! , - Corrupting Diamonds");
 
 		RegBlocks.register(event);
 		RegItems.register(event);
