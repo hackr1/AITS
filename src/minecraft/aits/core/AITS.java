@@ -3,10 +3,7 @@ package aits.core;
 import net.minecraft.item.ItemStack;
 import aits.core.common.CommonProxy;
 import aits.core.items.ItemCoke;
-import aits.core.regs.RegBlocks;
-import aits.core.regs.RegConfig;
-import aits.core.regs.RegItems;
-import aits.core.regs.RegNames;
+import aits.core.regs.*;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -29,7 +26,7 @@ public class AITS {
 	public static AITS instance;
 	public static final tabCreativeAITS tabAITS = new tabCreativeAITS(12,
 			"AITS");
-	public static ItemCoke itemCoke;
+	
 
 	// Says where the client and server 'proxy' code is loaded.
 	@SidedProxy(clientSide = "aits.core.client.ClientProxy", serverSide = "aits.core.common.CommonProxy")
@@ -47,7 +44,9 @@ public class AITS {
 		RegBlocks.register(event);
 		RegItems.register(event);
 		RegNames.register(event);
-
+		RegCrafting.register(event);
+		RegSmelting.register(event);
+		RegTileEntity.register(event);
 		NetworkRegistry.instance().registerGuiHandler(this, proxy);
 		// TODO GameRegistry.registerWorldGenerator(this);
 
