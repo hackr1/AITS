@@ -13,6 +13,8 @@ reobf/*
 runtime/*
 logs/*
 temp/*
+forge/*
+src - alt/*
 
 Start.java
 !src/minecraft/aits/*

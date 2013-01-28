@@ -4,6 +4,7 @@ import net.minecraft.item.ItemStack;
 import aits.core.common.CommonProxy;
 import aits.core.items.ItemCoke;
 import aits.core.regs.*;
+import aits.chemistry.Chemistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -49,6 +50,10 @@ public class AITS {
 		RegTileEntity.register(event);
 		NetworkRegistry.instance().registerGuiHandler(this, proxy);
 		// TODO GameRegistry.registerWorldGenerator(this);
+		
+		if(RegConfig.ChemistryEnabled){
+			Chemistry.load(event);
+		}
 
 	}
 

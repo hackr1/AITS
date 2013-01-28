@@ -7,6 +7,7 @@ public class RegConfig {
 	public static int ticksBetweenChecks;
 	public static int BlockIDRange;
 	public static int ItemIDRange;
+	public static boolean ChemistryEnabled;
 
 	public static void register(FMLPreInitializationEvent event) {
 		// Stub Method
@@ -31,6 +32,10 @@ public class RegConfig {
 						5000,
 						"This is the start of the item ID range that AITS will use. The range will end after 2500 more of this number (may increase")
 				.getInt();
+		ChemistryEnabled = config.get("Features",
+							  "enable_chemistry",
+							  true)
+				.getBoolean(true);
 		// saving the configuration to its file
 		config.save();
 	}
