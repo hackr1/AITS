@@ -1,5 +1,8 @@
 package aits.core.common;
 
+import aits.core.client.gui.GuiBloomery;
+import aits.core.container.ContainerBloomery;
+import aits.core.tileentity.TileEntityBloomery;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IGuiHandler;
@@ -17,12 +20,28 @@ public class CommonProxy implements IGuiHandler {
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world,
 			int x, int y, int z) {
-		return null;
+		if(ID == 0)
+		{
+			TileEntityBloomery var1 = (TileEntityBloomery)world.getBlockTileEntity(x, y, z);
+			return new ContainerBloomery(player.inventory, var1);
+		}
+		else
+		{
+			return null;
+		}
 	}
 
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world,
 			int x, int y, int z) {
-		return null;
+		if(ID == 0)
+		{
+			TileEntityBloomery var1 = (TileEntityBloomery)world.getBlockTileEntity(x, y, z);
+			return new GuiBloomery(player.inventory, var1);
+		}
+		else
+		{
+			return null;
+		}
 	}
 }

@@ -13,63 +13,34 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.*;
 
+import aits.api.IAITSModule;
+import aits.api.ModuleRegistry;
 import aits.chemistry.blocks.*;
 import aits.core.*;
 import aits.core.regs.*;
 import aits.core.common.*;
 
-public class Chemistry{
-	
-	//block definitions
+@Mod(modid = "AITS|Chemistry", name = "Chemistry", version = Version.VERSION, dependencies = DefaultProps.DEPENDENCY_CORE)
+public class Chemistry implements IAITSModule
+{
+	//Block definitions
 	public static Block saltOre;
 	public static Block platinumOre;
 	public static Block leadOre;
 	public static Block cinnabarOre;
 	public static Block carobiiteOre;
 	
-	//item definitions
-	/*
+	//Item definitions - not yet implemented.
+	/**
 	public static Item salt;
 	public static Item platinum;
 	public static Item lead;
 	public static Item cinnabar;
-	public static Item potassiumfluoride;
-	*/
+	public static Item potassiumfluoride;**/
 	
-	public static void load(FMLInitializationEvent fmlinitializationevent){
-		
-		registerBlocks();
-		generateOreDictEntries();
-		registerSmeltingRecipes();
-		
-	}
-	
-	private static void registerBlocks(){
-		
-		saltOre = new BlockSaltOre(RegConfig.BlockIDRange + 25, 0).setBlockName("Salt Ore)");
-		GameRegistry.registerBlock(saltOre);
-		LanguageRegistry.addName(saltOre, "Salt Ore");
-		
-		platinumOre = new BlockPlatinumOre(RegConfig.BlockIDRange + 26, 1).setBlockName("Platinum Ore");
-		GameRegistry.registerBlock(platinumOre);
-		LanguageRegistry.addName(platinumOre, "Platinum Ore");
-		
-		leadOre = new BlockLeadOre(RegConfig.BlockIDRange + 27, 2).setBlockName("Lead Ore");
-		GameRegistry.registerBlock(leadOre);
-		LanguageRegistry.addName(leadOre, "Lead Ore");
-		
-		cinnabarOre = new BlockCinnabarOre(RegConfig.BlockIDRange + 28, 3).setBlockName("Cinnabar Ore");
-		GameRegistry.registerBlock(cinnabarOre);
-		LanguageRegistry.addName(cinnabarOre, "Cinnabar Ore");
-		
-		carobiiteOre = new BlockCarobiiteOre(RegConfig.BlockIDRange + 29, 0).setBlockName("Carobiite Ore");
-		GameRegistry.registerBlock(carobiiteOre);
-		LanguageRegistry.addName(carobiiteOre, "Carobiite Ore");
-	
-	}
-	
-	private static void generateOreDictEntries(){
-		
+	@Override
+	public void generateOreDictEntries()
+	{
 		OreDictionary.registerOre("oreSalt", new ItemStack(saltOre));
 		OreDictionary.registerOre("orePlatinum", new ItemStack(platinumOre));
 		OreDictionary.registerOre("oreLead", new ItemStack(leadOre));
@@ -77,11 +48,48 @@ public class Chemistry{
 		OreDictionary.registerOre("oreCarobiite", new ItemStack(carobiiteOre));
 	}
 	
-	private static void registerSmeltingRecipes(){
+	@Override
+	public void registerSmeltingRecipes()
+	{
 		//GameRegistry.addSmelting(platinumOre.blockID, new ItemStack(platinum), 1.0f);
 		//GameRegistry.addSmelting(leadOre.blockID, new ItemStack(lead), 0.3f);
 	}
-	
-	
+
+	@Override
+	public void loadBlocks()
+	{
+		saltOre = new BlockSaltOre(RegConfig.BlockIDRange + 25, 0).setBlockName("Salt Ore)");
+		platinumOre = new BlockPlatinumOre(RegConfig.BlockIDRange + 26, 1).setBlockName("Platinum Ore");
+		leadOre = new BlockLeadOre(RegConfig.BlockIDRange + 27, 2).setBlockName("Lead Ore");
+		cinnabarOre = new BlockCinnabarOre(RegConfig.BlockIDRange + 28, 3).setBlockName("Cinnabar Ore");
+		carobiiteOre = new BlockCarobiiteOre(RegConfig.BlockIDRange + 29, 0).setBlockName("Carobiite Ore");
+	}
+
+	@Override
+	public void registerBlocks() 
+	{
+		GameRegistry.registerBlock(saltOre, "saltOre");
+		GameRegistry.registerBlock(platinumOre, "platinumOre");
+		GameRegistry.registerBlock(leadOre, "leadOre");
+		GameRegistry.registerBlock(cinnabarOre, "cinnabarOre");
+		GameRegistry.registerBlock(carobiiteOre, "carobiiteOre");
+		
+	}
+
+	@Override
+	public void loadItems() {}
+
+	@Override
+	public void registerCraftingRecipes() {}
+
+	@Override
+	public void addLocalizations()
+	{
+		LanguageRegistry.addName(saltOre, "Salt Ore");
+		LanguageRegistry.addName(platinumOre, "Platinum Ore");
+		LanguageRegistry.addName(leadOre, "Lead Ore");
+		LanguageRegistry.addName(cinnabarOre, "Cinnabar Ore");
+		LanguageRegistry.addName(carobiiteOre, "Carobiite Ore");
+	}
 }
 		

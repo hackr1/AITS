@@ -345,7 +345,7 @@ public class TileEntityBloomery extends TileEntity implements IInventory, ISided
         }
         else
         {
-            int var1 = par0ItemStack.getItem().shiftedIndex;
+            int var1 = par0ItemStack.getItem().itemID;
             Item var2 = par0ItemStack.getItem();
 
             if (par0ItemStack.getItem() instanceof ItemBlock && Block.blocksList[var1] != null)
@@ -366,11 +366,11 @@ public class TileEntityBloomery extends TileEntity implements IInventory, ISided
             if (var2 instanceof ItemTool && ((ItemTool) var2).getToolMaterialName().equals("WOOD")) return 200;
             if (var2 instanceof ItemSword && ((ItemSword) var2).func_77825_f().equals("WOOD")) return 200;
             if (var2 instanceof ItemHoe && ((ItemHoe) var2).func_77842_f().equals("WOOD")) return 200;
-            if (var1 == Item.stick.shiftedIndex) return 100;
-            if (var1 == Item.coal.shiftedIndex) return 1600;
-            if (var1 == Item.bucketLava.shiftedIndex) return 20000;
+            if (var1 == Item.stick.itemID) return 100;
+            if (var1 == Item.coal.itemID) return 1600;
+            if (var1 == Item.bucketLava.itemID) return 20000;
             if (var1 == Block.sapling.blockID) return 100;
-            if (var1 == Item.blazeRod.shiftedIndex) return 2400;
+            if (var1 == Item.blazeRod.itemID) return 2400;
             return GameRegistry.getFuelValue(par0ItemStack);
         }
     }

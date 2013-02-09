@@ -6,9 +6,11 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.common.IWorldGenerator;
 
-public class Generation implements IWorldGenerator {
+public class Generation implements IWorldGenerator 
+{
 	public static void generateNether(Random random, int X, int Z, World world,
-			IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
+			IChunkProvider chunkGenerator, IChunkProvider chunkProvider) 
+	{
 	}
 
 	public static void generateOverworld(Random random, int X, int chunkZ,
