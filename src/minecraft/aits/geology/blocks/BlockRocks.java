@@ -10,19 +10,19 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
-public class BlockBricks extends Block
+public class BlockRocks extends Block
 {
     /** The type of tree this block came from. */
     public static final String[] brickType = new String[] {"oak", "spruce", "birch", "jungle", "1", "2", "3"};
 
-    public BlockBricks(int par1)
+    public BlockRocks(int par1)
     {
         super(par1, 4, Material.rock);
         this.setCreativeTab(CreativeTabs.tabBlock);
         this.setHardness(1.5F);
         this.setResistance(10.0F);
         this.setStepSound(soundStoneFootstep);
-        this.setBlockName("brickSmoothMulti");
+        this.setBlockName("rockMulti");
         this.setTextureFile(CommonProxy.BLOCK_PNG);
     }
 
@@ -35,25 +35,25 @@ public class BlockBricks extends Block
         {
             case 1:
                // return 65;
-            	return 33;
+            	return 1;
             case 2:
               //  return 66;
-            	return 34;
+            	return 2;
             case 3:
               //  return 67;
-            	return 35;
+            	return 3;
             case 4:
                // return 68;
-            	return 36;
+            	return 4;
             case 5:
               //  return 69;
-            	return 37;
+            	return 5;
             case 6:
              //   return 70;
-            	return 38;
+            	return 6;
             default:
                 //return 64;
-            	return 32;
+            	return 0;
         }
     }
 
