@@ -10,6 +10,7 @@ public class AITSBlockBase extends Block {
 	public AITSBlockBase(int par1, int par2, Material par3Material) {
 		super(par1, par2, par3Material);
 		this.setCreativeTab(AITS.tabAITS);
+		//TEST
 	}
 
 	public String getTextureFile() {
