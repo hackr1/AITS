@@ -68,7 +68,7 @@ public class Geology implements IAITSModule
 
 	@Override
 	public void loadItems() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
@@ -83,13 +83,13 @@ public class Geology implements IAITSModule
 
 	@Override
 	public void registerSmeltingRecipes() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	@Override
 	public void registerCraftingRecipes() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 

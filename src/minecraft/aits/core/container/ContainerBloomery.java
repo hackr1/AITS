@@ -54,7 +54,8 @@ public class ContainerBloomery extends Container
      */
     public void detectAndSendChanges()
     {
-        super.detectAndSendChanges();
+    	//FIXME this method down there doesn't exist, commented it out for now, please delete if not needed!
+        //super.detectAndSendChanges();
 
         for (int var1 = 0; var1 < this.crafters.size(); ++var1)
         {

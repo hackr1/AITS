@@ -102,12 +102,12 @@ public class SlotBloomery extends Slot
 
         GameRegistry.onItemSmelted(thePlayer, par1ItemStack);
 
-        if (par1ItemStack.itemID == Item.ingotIron.itemID)
+        if (par1ItemStack.itemID == Item.ingotIron.shiftedIndex)
         {
             this.thePlayer.addStat(AchievementList.acquireIron, 1);
         }
 
-        if (par1ItemStack.itemID == Item.fishCooked.itemID)
+        if (par1ItemStack.itemID == Item.fishCooked.shiftedIndex)
         {
             this.thePlayer.addStat(AchievementList.cookFish, 1);
         }
