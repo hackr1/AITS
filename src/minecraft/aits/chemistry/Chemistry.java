@@ -42,7 +42,7 @@ public class Chemistry implements IAITSModule
 	public static Block platinumOre;
 	public static Block leadOre;
 	public static Block cinnabarOre;
-	public static Block carobiiteOre;
+	public static Block carobbiiteOre;
 
 	public static Block BlockLabBench;
 
@@ -79,7 +79,7 @@ public class Chemistry implements IAITSModule
 		OreDictionary.registerOre("orePlatinum", new ItemStack(platinumOre));
 		OreDictionary.registerOre("oreLead", new ItemStack(leadOre));
 		OreDictionary.registerOre("oreCinnabar", new ItemStack(cinnabarOre));
-		OreDictionary.registerOre("oreCarobiite", new ItemStack(carobiiteOre));
+		OreDictionary.registerOre("oreCarobbiite", new ItemStack(carobbiiteOre));
 	}
 
 	@Override
@@ -96,7 +96,7 @@ public class Chemistry implements IAITSModule
 		platinumOre = new BlockPlatinumOre(RegConfig.BlockIDRange + 26, 1).setBlockName("Platinum Ore");
 		leadOre = new BlockLeadOre(RegConfig.BlockIDRange + 27, 2).setBlockName("Lead Ore");
 		cinnabarOre = new BlockCinnabarOre(RegConfig.BlockIDRange + 28, 3).setBlockName("Cinnabar Ore");
-		carobiiteOre = new BlockCarobiiteOre(RegConfig.BlockIDRange + 29, 0).setBlockName("Carobiite Ore");
+		carobbiiteOre = new BlockCarobiiteOre(RegConfig.BlockIDRange + 29, 0).setBlockName("Carobiite Ore");
 
 		BlockLabBench = new BlockLabBench(RegConfig.BlockIDRange + 24).setBlockName("Lab Bench").setCreativeTab(ChemistryCreativeTab);
 	}
@@ -108,7 +108,7 @@ public class Chemistry implements IAITSModule
 		GameRegistry.registerBlock(platinumOre, "platinumOre");
 		GameRegistry.registerBlock(leadOre, "leadOre");
 		GameRegistry.registerBlock(cinnabarOre, "cinnabarOre");
-		GameRegistry.registerBlock(carobiiteOre, "carobiiteOre");
+		GameRegistry.registerBlock(carobbiiteOre, "carobiiteOre");
 
 		TickRegistry.registerScheduledTickHandler(new ScheduledTickHandler(), Side.SERVER);
 		GameRegistry.registerTileEntity(TileLabBench.class, "LabBench");
@@ -137,7 +137,7 @@ public class Chemistry implements IAITSModule
 		LanguageRegistry.addName(platinumOre, "Platinum Ore");
 		LanguageRegistry.addName(leadOre, "Lead Ore");
 		LanguageRegistry.addName(cinnabarOre, "Cinnabar Ore");
-		LanguageRegistry.addName(carobiiteOre, "Carobiite Ore");
+		LanguageRegistry.addName(carobbiiteOre, "Carobiite Ore");
 
 		LanguageRegistry.instance().addStringLocalization("itemGroup.ChemCreativeTab", "en_US", "AITS | Chemistry");
 		LanguageRegistry.instance().addStringLocalization("itemGroup.ChemCreativeTab", "en_GB", "AITS | Chemistry");

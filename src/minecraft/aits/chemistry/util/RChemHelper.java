@@ -121,14 +121,6 @@ public class RChemHelper
 					DidFindOxidation = false;
 					break;
 
-				case 'Ä':
-					unicode += '(';
-					break;
-
-				case '¹':
-					unicode += ')';
-					break;
-
 				case '$':
 					DidFindOxidation = true;
 					break;

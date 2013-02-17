@@ -491,30 +491,30 @@ public enum EnumCompoundList
 	RbClO4			("Rubidium Perchlorate", 0, Ionic, new Compound[]{ new Compound(Rb, Cation), new Compound(iClO4, Anion) }, -300, -300, "", -1, Stable),
 	CsClO4			("Caesium Perchlorate", 0, Ionic, new Compound[]{ new Compound(Cs, Cation), new Compound(iClO4, Anion) }, -300, -300, "", -1, Stable),
 
-	BaÄClO4¹2		("Barium Perchlorate", 0, Ionic, new Compound[]{ new Compound(Ba, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
-	SrÄClO4¹2		("Strontium Perchlorate", 0, Ionic, new Compound[]{ new Compound(Sr, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
-	CaÄClO4¹2		("Calcium Perchlorate", 0, Ionic, new Compound[]{ new Compound(Ca, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
-	MgÄClO4¹2		("Magnesium Perchlorate", 0, Ionic, new Compound[]{ new Compound(Mg, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
-	ZnÄClO4¹2		("Zinc Perchlorate", 0, Ionic, new Compound[]{ new Compound(Zn, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
-	Cr$2ÄClO4¹2		("Chromium(II) Perchlorate", 0, Ionic, new Compound[]{ new Compound(Cr2, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
-	Fe$2ÄClO4¹2		("Iron(II) Perchlorate", 0, Ionic, new Compound[]{ new Compound(Fe2, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
-	Mn$2ÄClO4¹2		("Manganese(II) Perchlorate", 0, Ionic, new Compound[]{ new Compound(Mn2, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
-	Co$2ÄClO4¹2		("Cobalt(II) Perchlorate", 0, Ionic, new Compound[]{ new Compound(Co2, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
-	Sn$2ÄClO4¹2		("Tin(II) Perchlorate", 0, Ionic, new Compound[]{ new Compound(Sn2, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
-	CdÄClO4¹2		("Cadmium Perchlorate", 0, Ionic, new Compound[]{ new Compound(Cd, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
-	NiÄClO4¹2		("Nickel Perchlorate", 0, Ionic, new Compound[]{ new Compound(Ni, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
-	PbÄClO4¹2		("Lead Perchlorate", 0, Ionic, new Compound[]{ new Compound(Pb, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
+	BaClO42			("Ba(ClO4)2", "Barium Perchlorate", 0, Ionic, new Compound[]{ new Compound(Ba, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
+	SrClO42			("Sr(ClO4)2", "Strontium Perchlorate", 0, Ionic, new Compound[]{ new Compound(Sr, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
+	CaClO42			("Ca(ClO4)2", "Calcium Perchlorate", 0, Ionic, new Compound[]{ new Compound(Ca, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
+	MgClO42			("Mg(ClO4)2", "Magnesium Perchlorate", 0, Ionic, new Compound[]{ new Compound(Mg, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
+	ZnClO42			("Zn(ClO4)2", "Zinc Perchlorate", 0, Ionic, new Compound[]{ new Compound(Zn, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
+	Cr$2ClO42		("Cr(ClO4)2", "Chromium(II) Perchlorate", 0, Ionic, new Compound[]{ new Compound(Cr2, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
+	Fe$2ClO42		("Fe(ClO4)2", "Iron(II) Perchlorate", 0, Ionic, new Compound[]{ new Compound(Fe2, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
+	Mn$2ClO42		("Mn(ClO4)2", "Manganese(II) Perchlorate", 0, Ionic, new Compound[]{ new Compound(Mn2, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
+	Co$2ClO42		("Co(ClO4)2", "Cobalt(II) Perchlorate", 0, Ionic, new Compound[]{ new Compound(Co2, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
+	Sn$2ClO42		("Sn(ClO4)2", "Tin(II) Perchlorate", 0, Ionic, new Compound[]{ new Compound(Sn2, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
+	CdClO42			("Cd(ClO4)2", "Cadmium Perchlorate", 0, Ionic, new Compound[]{ new Compound(Cd, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
+	NiClO42			("Ni(ClO4)2", "Nickel Perchlorate", 0, Ionic, new Compound[]{ new Compound(Ni, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
+	PbClO42			("Pb(ClO4)2", "Lead Perchlorate", 0, Ionic, new Compound[]{ new Compound(Pb, Cation), new Compound(iClO4, 2, Anion) }, -300, -300, "", -1, Stable),
 
-	AlÄClO4¹3		("Aluminium Perchlorate", 0, Ionic, new Compound[]{ new Compound(Al, Cation), new Compound(iClO4, 3, Anion) }, -300, -300, "", -1, Stable),
-	Fe$3ÄClO4¹3		("Iron(III) Perchlorate", 0, Ionic, new Compound[]{ new Compound(Fe3, Cation), new Compound(iClO4, 3, Anion) }, -300, -300, "", -1, Stable),
+	AlClO43			("Al(ClO4)3", "Aluminium Perchlorate", 0, Ionic, new Compound[]{ new Compound(Al, Cation), new Compound(iClO4, 3, Anion) }, -300, -300, "", -1, Stable),
+	Fe$3ClO43		("Fe(ClO4)3", "Iron(III) Perchlorate", 0, Ionic, new Compound[]{ new Compound(Fe3, Cation), new Compound(iClO4, 3, Anion) }, -300, -300, "", -1, Stable),
 
 
 
 
 	// Nitrate Salts
 
-	// Ä denotes an opening bracket.
-	// ¹ denotes a closing bracket.
+	//  denotes an opening bracket.
+	//  denotes a closing bracket.
 	// Damn java and its lack of symbols.
 
 	NH4NO3			("Ammonium Nitrate", 0, Ionic, new Compound[]{ new Compound(iNH4, Cation), new Compound(iNO3, Anion) }, -300, -300, "", -1, Stable),
@@ -526,26 +526,26 @@ public enum EnumCompoundList
 	KNO3			("Potassium Nitrate", 0, Ionic, new Compound[]{ new Compound(K, Cation), new Compound(iNO3, Anion) }, -300, -300, "", -1, Stable),
 	RbNO3			("Rubidium Nitrate", 0, Ionic, new Compound[]{ new Compound(Rb, Cation), new Compound(iNO3, Anion) }, -300, -300, "", -1, Stable),
 	CsNO3			("Caesium Nitrate", 0, Ionic, new Compound[]{ new Compound(Cs, Cation), new Compound(iNO3, Anion) }, -300, -300, "", -1, Stable),
-	BaÄNO3¹2		("Barium Nitrate", 0, Ionic, new Compound[]{ new Compound(Ba, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
-	SrÄNO3¹2		("Strontium Nitrate", 0, Ionic, new Compound[]{ new Compound(Sr, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
-	CaÄNO3¹2		("Calcium Nitrate", 0, Ionic, new Compound[]{ new Compound(Ca, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
-	MgÄNO3¹2		("Magnesium Nitrate", 0, Ionic, new Compound[]{ new Compound(Mg, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
-	Mn$2ÄNO3¹2		("Manganese(II) Nitrate", 0, Ionic, new Compound[]{ new Compound(Mn2, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
-	Fe$2ÄNO3¹2		("Iron(II) Nitrate", 0, Ionic, new Compound[]{ new Compound(Fe2, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
-	Co$2ÄNO3¹2		("Cobalt(II) Nitrate", 0, Ionic, new Compound[]{ new Compound(Co2, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
-	Sn$2ÄNO3¹2		("Tin(II) Nitrate", 0, Ionic, new Compound[]{ new Compound(Sn2, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
-	ZnÄNO3¹2		("Zinc Nitrate", 0, Ionic, new Compound[]{ new Compound(Zn, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
-	Cr$2ÄNO3¹2		("Chromium(II) Nitrate", 0, Ionic, new Compound[]{ new Compound(Cr2, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
-	CdÄNO3¹2		("Cadmium Nitrate", 0, Ionic, new Compound[]{ new Compound(Cd, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
-	NiÄNO3¹2		("Nickel Nitrate", 0, Ionic, new Compound[]{ new Compound(Ni, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
-	PbÄNO3¹2		("Lead Nitrate", 0, Ionic, new Compound[]{ new Compound(Pb, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
+	BaNO32			("Ba(NO3)2", "Barium Nitrate", 0, Ionic, new Compound[]{ new Compound(Ba, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
+	SrNO32			("Sr(NO3)2","Strontium Nitrate", 0, Ionic, new Compound[]{ new Compound(Sr, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
+	CaNO32			("Ca(NO3)2","Calcium Nitrate", 0, Ionic, new Compound[]{ new Compound(Ca, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
+	MgNO32			("Mg(NO3)2","Magnesium Nitrate", 0, Ionic, new Compound[]{ new Compound(Mg, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
+	Mn$2NO32		("Mn(NO3)2","Manganese(II) Nitrate", 0, Ionic, new Compound[]{ new Compound(Mn2, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
+	Fe$2NO32		("Fe(NO3)2","Iron(II) Nitrate", 0, Ionic, new Compound[]{ new Compound(Fe2, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
+	Co$2NO32		("Co(NO3)2","Cobalt(II) Nitrate", 0, Ionic, new Compound[]{ new Compound(Co2, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
+	Sn$2NO32		("Sn(NO3)2","Tin(II) Nitrate", 0, Ionic, new Compound[]{ new Compound(Sn2, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
+	ZnNO32			("Zn(NO3)2","Zinc Nitrate", 0, Ionic, new Compound[]{ new Compound(Zn, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
+	Cr$2NO32		("Cr(NO3)2","Chromium(II) Nitrate", 0, Ionic, new Compound[]{ new Compound(Cr2, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
+	CdNO32			("Cd(NO3)2","Cadmium Nitrate", 0, Ionic, new Compound[]{ new Compound(Cd, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
+	NiNO32			("Ni(NO3)2","Nickel Nitrate", 0, Ionic, new Compound[]{ new Compound(Ni, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
+	PbNO32			("Pb(NO3)2","Lead Nitrate", 0, Ionic, new Compound[]{ new Compound(Pb, Cation), new Compound(iNO3, 2, Anion) }, -300, -300, "", -1, Stable),
 
-	AlÄNO3¹3		("Aluminium Nitrate", 0, Ionic, new Compound[]{ new Compound(Al, Cation), new Compound(iNO3, 3, Anion) }, -300, -300, "", -1, Stable),
-	Fe$3ÄNO3¹3		("Iron(III) Nitrate", 0, Ionic, new Compound[]{ new Compound(Fe3, Cation), new Compound(iNO3, 3, Anion) }, -300, -300, "", -1, Stable),
+	AlNO33			("Al(NO3)3","Aluminium Nitrate", 0, Ionic, new Compound[]{ new Compound(Al, Cation), new Compound(iNO3, 3, Anion) }, -300, -300, "", -1, Stable),
+	Fe$3NO33		("Fe(NO3)3","Iron(III) Nitrate", 0, Ionic, new Compound[]{ new Compound(Fe3, Cation), new Compound(iNO3, 3, Anion) }, -300, -300, "", -1, Stable),
 
 
 	// Sulphate Salts
-	ÄNH4¹2SO4		("Ammonium Sulphate", 0, Ionic, new Compound[]{ new Compound(iNH4, 2, Cation), new Compound(iSO4, Anion) }, -300, -300, "", -1, Stable),
+	NH42SO4			("(NH4)2SO4", "Ammonium Sulphate", 0, Ionic, new Compound[]{ new Compound(iNH4, 2, Cation), new Compound(iSO4, Anion) }, -300, -300, "", -1, Stable),
 
 
 	// Metal Salts
@@ -569,8 +569,8 @@ public enum EnumCompoundList
 	NiSO4			("Nickel Sulphate", 0, Ionic, new Compound[]{ new Compound(Ni, Cation), new Compound(iSO4, Anion) }, -300, -300, "", -1, Stable),
 	PbSO4			("Lead Sulphate", 0, Ionic, new Compound[]{ new Compound(Pb, Cation), new Compound(iSO4, Anion) }, -300, -300, "", -1, Stable),
 
-	Al2ÄSO4¹3		("Aluminium Sulphate", 0, Ionic, new Compound[]{ new Compound(Al, 2, Cation), new Compound(iSO4, 3, Anion) }, -300, -300, "", -1, Stable),
-	Fe$32ÄSO4¹3		("Iron(III) Sulphate", 0, Ionic, new Compound[]{ new Compound(Fe3, 2, Cation), new Compound(iSO4, 3, Anion) }, -300, -300, "", -1, Stable),
+	Al2SO43			("Al2(SO4)3", "Aluminium Sulphate", 0, Ionic, new Compound[]{ new Compound(Al, 2, Cation), new Compound(iSO4, 3, Anion) }, -300, -300, "", -1, Stable),
+	Fe$32SO43		("Fe2(SO4)3", "Iron(III) Sulphate", 0, Ionic, new Compound[]{ new Compound(Fe3, 2, Cation), new Compound(iSO4, 3, Anion) }, -300, -300, "", -1, Stable),
 
 
 
@@ -735,13 +735,31 @@ public enum EnumCompoundList
 			this.Components.add(C);
 	}
 
-	public String GetShortName()
+	// Polyatomic compounds that need overriding for short names due to brackets.
+	private EnumCompoundList(String ShortName, String name, int IonicCharge, EnumClassificationList classification, Compound[] Components,	int MeltingPoint, int BoilingPoint,
+					String HexColour, int HalfLife, EnumClassificationList RadState)
 	{
-		if(this.ShortName == "")
-			return RChemHelper.ConvertToUnicode(this.GetChemName());
+		this.ShortName = ShortName;
+		this.ReadableName = name;
+		this.Classification = classification;
+		this.IonicCharge = IonicCharge;
 
-		return this.GetChemName();
+		this.MeltingPoint = MeltingPoint;
+		this.BoilingPoint = BoilingPoint;
+
+		this.HexColour = HexColour;
+		this.RadState = RadState;
+
+		this.NeutronNumber = 0;
+		this.AtomicNumber = 0;
+		this.IsIsotope = false;
+		this.HalfLife = HalfLife;
+
+		for(Compound C : Components)
+			this.Components.add(C);
 	}
+
+
 
 	public String GetFullName()
 	{
@@ -786,22 +804,33 @@ public enum EnumCompoundList
 
 
 	// Element funcs
+
+
+	public String GetShortName()
+	{
+		if(this.ShortName == "")
+			return RChemHelper.ConvertToUnicode(this.GetChemName());
+
+		return this.ShortName;
+	}
+
 	public String GetChemName()
 	{
 		if(RChemHelper.ContainsDigit(this.name()) && this.IsElement())
 			return this.name().substring(0, this.name().length() - 1);
-		else if(this.name().contains("¹") || this.name().contains("Ä"))
+
+		else if(this.name().contains("$"))
 		{
 			String ret = this.name();
 
 			// eliminate the dollar signs we use for oxidation states
-			// replace the symbols we use for brackets.
 			ret.replaceAll("$", "");
-			ret.replaceAll("Ä", "(");
-			ret.replaceAll("¹", ")");
 
 			return ret;
 		}
+		else if(this.ShortName != "")
+			return this.ShortName;
+
 		else
 			return this.name();
 	}

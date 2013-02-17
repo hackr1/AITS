@@ -67,19 +67,19 @@ public enum EnumRecipeList
 	Na_HCl			(new Compound[]{ new Compound(Na, 2), new Compound(HCl, 2)	}, new Compound[]{ new Compound(NaCl, 2),		new Compound(H2) }),
 	Li_HCl			(new Compound[]{ new Compound(Li, 2), new Compound(HCl, 2)	}, new Compound[]{ new Compound(LiCl, 2),		new Compound(H2) }),
 
-	Ba_HCl			(new Compound[]{ new Compound(Ba), new Compound(HCl, 2)		}, new Compound[]{ new Compound(BaÄClO4¹2),	new Compound(H2) }),
-	Sr_HCl			(new Compound[]{ new Compound(Sr), new Compound(HCl, 2)		}, new Compound[]{ new Compound(SrÄClO4¹2),	new Compound(H2) }),
-	Ca_HCl			(new Compound[]{ new Compound(Ca), new Compound(HCl, 2)		}, new Compound[]{ new Compound(CaÄClO4¹2),	new Compound(H2) }),
-	Mg_HCl			(new Compound[]{ new Compound(Mg), new Compound(HCl, 2)		}, new Compound[]{ new Compound(MgÄClO4¹2),	new Compound(H2) }),
-	Mn_HCl			(new Compound[]{ new Compound(Mn2), new Compound(HCl, 2)		}, new Compound[]{ new Compound(Mn$2ÄClO4¹2),	new Compound(H2) }),
-	Zn_HCl			(new Compound[]{ new Compound(Zn), new Compound(HCl, 2)		}, new Compound[]{ new Compound(ZnÄClO4¹2),	new Compound(H2) }),
-	Cr_HCl			(new Compound[]{ new Compound(Cr2), new Compound(HCl, 2)		}, new Compound[]{ new Compound(Cr$2ÄClO4¹2),	new Compound(H2) }),
-	Fe_2_HCl		(new Compound[]{ new Compound(Fe2), new Compound(HCl, 2)		}, new Compound[]{ new Compound(Fe$2ÄClO4¹2),	new Compound(H2) }),
-	Cd_HCl			(new Compound[]{ new Compound(Cd), new Compound(HCl, 2)		}, new Compound[]{ new Compound(CdÄClO4¹2),	new Compound(H2) }),
-	Co_HCl			(new Compound[]{ new Compound(Co2), new Compound(HCl, 2)		}, new Compound[]{ new Compound(Co$2ÄClO4¹2),	new Compound(H2) }),
-	Ni_HCl			(new Compound[]{ new Compound(Ni), new Compound(HCl, 2)		}, new Compound[]{ new Compound(NiÄClO4¹2),	new Compound(H2) }),
-	Sn_HCl			(new Compound[]{ new Compound(Sn2), new Compound(HCl, 2)		}, new Compound[]{ new Compound(Sn$2ÄClO4¹2),	new Compound(H2) }),
-	Pb_HCl			(new Compound[]{ new Compound(Pb), new Compound(HCl, 2)		}, new Compound[]{ new Compound(PbÄClO4¹2),	new Compound(H2) }),
+	Ba_HCl			(new Compound[]{ new Compound(Ba), new Compound(HCl, 2)		}, new Compound[]{ new Compound(BaClO42),	new Compound(H2) }),
+	Sr_HCl			(new Compound[]{ new Compound(Sr), new Compound(HCl, 2)		}, new Compound[]{ new Compound(SrClO42),	new Compound(H2) }),
+	Ca_HCl			(new Compound[]{ new Compound(Ca), new Compound(HCl, 2)		}, new Compound[]{ new Compound(CaClO42),	new Compound(H2) }),
+	Mg_HCl			(new Compound[]{ new Compound(Mg), new Compound(HCl, 2)		}, new Compound[]{ new Compound(MgClO42),	new Compound(H2) }),
+	Mn_HCl			(new Compound[]{ new Compound(Mn2), new Compound(HCl, 2)		}, new Compound[]{ new Compound(Mn$2ClO42),	new Compound(H2) }),
+	Zn_HCl			(new Compound[]{ new Compound(Zn), new Compound(HCl, 2)		}, new Compound[]{ new Compound(ZnClO42),	new Compound(H2) }),
+	Cr_HCl			(new Compound[]{ new Compound(Cr2), new Compound(HCl, 2)		}, new Compound[]{ new Compound(Cr$2ClO42),	new Compound(H2) }),
+	Fe_2_HCl		(new Compound[]{ new Compound(Fe2), new Compound(HCl, 2)		}, new Compound[]{ new Compound(Fe$2ClO42),	new Compound(H2) }),
+	Cd_HCl			(new Compound[]{ new Compound(Cd), new Compound(HCl, 2)		}, new Compound[]{ new Compound(CdClO42),	new Compound(H2) }),
+	Co_HCl			(new Compound[]{ new Compound(Co2), new Compound(HCl, 2)		}, new Compound[]{ new Compound(Co$2ClO42),	new Compound(H2) }),
+	Ni_HCl			(new Compound[]{ new Compound(Ni), new Compound(HCl, 2)		}, new Compound[]{ new Compound(NiClO42),	new Compound(H2) }),
+	Sn_HCl			(new Compound[]{ new Compound(Sn2), new Compound(HCl, 2)		}, new Compound[]{ new Compound(Sn$2ClO42),	new Compound(H2) }),
+	Pb_HCl			(new Compound[]{ new Compound(Pb), new Compound(HCl, 2)		}, new Compound[]{ new Compound(PbClO42),	new Compound(H2) }),
 
 	Fe_3_HCl		(new Compound[]{ new Compound(Fe3, 2), new Compound(HCl, 6)	}, new Compound[]{ new Compound(Fe$3Cl3, 2),	new Compound(H2, 3) }),
 	Al_HCl			(new Compound[]{ new Compound(Al, 2), new Compound(HCl, 6)	}, new Compound[]{ new Compound(AlCl3, 2),	new Compound(H2, 3) }),
@@ -87,8 +87,8 @@ public enum EnumRecipeList
 	// Nitric Acid (HNO3)
 
 
-	// Ä denotes an opening bracket.
-	// ¹ denotes a closing bracket.
+	//  denotes an opening bracket.
+	//  denotes a closing bracket.
 	// Damn java and its lack of symbols.
 
 	Cs_HNO3			(new Compound[]{ new Compound(Cs, 2), new Compound(HNO3, 2)	}, new Compound[]{ new Compound(CsNO3, 2),	new Compound(H2) }),
@@ -111,8 +111,8 @@ public enum EnumRecipeList
 	Sn_HNO3			(new Compound[]{ new Compound(Sn2), new Compound(HNO3, 2)	}, new Compound[]{ new Compound(Sn$2SO4),		new Compound(H2) }),
 	Pb_HNO3			(new Compound[]{ new Compound(Pb), new Compound(HNO3, 2)		}, new Compound[]{ new Compound(PbSO4),		new Compound(H2) }),
 
-	Fe_3_HNO3		(new Compound[]{ new Compound(Fe3, 2), new Compound(HNO3, 6)	}, new Compound[]{ new Compound(Fe$3ÄNO3¹3, 2),new Compound(H2, 3) }),
-	Al_HNO3			(new Compound[]{ new Compound(Al, 2), new Compound(HNO3, 6)	}, new Compound[]{ new Compound(AlÄNO3¹3, 2),	new Compound(H2, 3) }),
+	Fe_3_HNO3		(new Compound[]{ new Compound(Fe3, 2), new Compound(HNO3, 6)	}, new Compound[]{ new Compound(Fe$3NO33, 2),new Compound(H2, 3) }),
+	Al_HNO3			(new Compound[]{ new Compound(Al, 2), new Compound(HNO3, 6)	}, new Compound[]{ new Compound(AlNO33, 2),	new Compound(H2, 3) }),
 
 
 
@@ -137,8 +137,8 @@ public enum EnumRecipeList
 	Sn_H2SO4		(new Compound[]{ new Compound(Sn2), new Compound(H2SO4)		}, new Compound[]{ new Compound(Sn$2SO4),		new Compound(H2) }),
 	Pb_H2SO4		(new Compound[]{ new Compound(Pb), new Compound(H2SO4)		}, new Compound[]{ new Compound(PbSO4),		new Compound(H2) }),
 
-	Fe_3_H2SO4		(new Compound[]{ new Compound(Fe3, 2), new Compound(H2SO4, 6)}, new Compound[]{ new Compound(Fe$32ÄSO4¹3, 2),new Compound(H2, 3) }),
-	Al_H2SO4		(new Compound[]{ new Compound(Al, 2), new Compound(H2SO4, 6)	}, new Compound[]{ new Compound(Al2ÄSO4¹3, 2),new Compound(H2, 3) }),
+	Fe_3_H2SO4		(new Compound[]{ new Compound(Fe3, 2), new Compound(H2SO4, 6)}, new Compound[]{ new Compound(Fe$32SO43, 2),new Compound(H2, 3) }),
+	Al_H2SO4		(new Compound[]{ new Compound(Al, 2), new Compound(H2SO4, 6)	}, new Compound[]{ new Compound(Al2SO43, 2),new Compound(H2, 3) }),
 
 
 	// Hydrobromic Acid (HBr)
@@ -198,19 +198,19 @@ public enum EnumRecipeList
 	Na_HClO4		(new Compound[]{ new Compound(Na, 2), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(NaCl, 2),		new Compound(H2) }),
 	Li_HClO4		(new Compound[]{ new Compound(Li, 2), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(LiCl, 2),		new Compound(H2) }),
 
-	Ba_HClO4		(new Compound[]{ new Compound(Ba), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(BaÄClO4¹2),	new Compound(H2) }),
-	Sr_HClO4		(new Compound[]{ new Compound(Sr), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(SrÄClO4¹2),	new Compound(H2) }),
-	Ca_HClO4		(new Compound[]{ new Compound(Ca), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(CaÄClO4¹2),	new Compound(H2) }),
-	Mg_HClO4		(new Compound[]{ new Compound(Mg), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(MgÄClO4¹2),	new Compound(H2) }),
-	Mn_HClO4		(new Compound[]{ new Compound(Mn2), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(Mn$2ÄClO4¹2),	new Compound(H2) }),
-	Zn_HClO4		(new Compound[]{ new Compound(Zn), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(ZnÄClO4¹2),	new Compound(H2) }),
-	Cr_HClO4		(new Compound[]{ new Compound(Cr2), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(Cr$2ÄClO4¹2),	new Compound(H2) }),
-	Fe_2_HClO4		(new Compound[]{ new Compound(Fe2), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(Fe$2ÄClO4¹2),	new Compound(H2) }),
-	Cd_HClO4		(new Compound[]{ new Compound(Cd), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(CdÄClO4¹2),	new Compound(H2) }),
-	Co_HClO4		(new Compound[]{ new Compound(Co2), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(Co$2ÄClO4¹2),	new Compound(H2) }),
-	Ni_HClO4		(new Compound[]{ new Compound(Ni), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(NiÄClO4¹2),	new Compound(H2) }),
-	Sn_HClO4		(new Compound[]{ new Compound(Sn2), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(Sn$2ÄClO4¹2),	new Compound(H2) }),
-	Pb_HClO4		(new Compound[]{ new Compound(Pb), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(PbÄClO4¹2),	new Compound(H2) }),
+	Ba_HClO4		(new Compound[]{ new Compound(Ba), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(BaClO42),	new Compound(H2) }),
+	Sr_HClO4		(new Compound[]{ new Compound(Sr), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(SrClO42),	new Compound(H2) }),
+	Ca_HClO4		(new Compound[]{ new Compound(Ca), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(CaClO42),	new Compound(H2) }),
+	Mg_HClO4		(new Compound[]{ new Compound(Mg), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(MgClO42),	new Compound(H2) }),
+	Mn_HClO4		(new Compound[]{ new Compound(Mn2), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(Mn$2ClO42),	new Compound(H2) }),
+	Zn_HClO4		(new Compound[]{ new Compound(Zn), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(ZnClO42),	new Compound(H2) }),
+	Cr_HClO4		(new Compound[]{ new Compound(Cr2), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(Cr$2ClO42),	new Compound(H2) }),
+	Fe_2_HClO4		(new Compound[]{ new Compound(Fe2), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(Fe$2ClO42),	new Compound(H2) }),
+	Cd_HClO4		(new Compound[]{ new Compound(Cd), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(CdClO42),	new Compound(H2) }),
+	Co_HClO4		(new Compound[]{ new Compound(Co2), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(Co$2ClO42),	new Compound(H2) }),
+	Ni_HClO4		(new Compound[]{ new Compound(Ni), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(NiClO42),	new Compound(H2) }),
+	Sn_HClO4		(new Compound[]{ new Compound(Sn2), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(Sn$2ClO42),	new Compound(H2) }),
+	Pb_HClO4		(new Compound[]{ new Compound(Pb), new Compound(HClO4, 2)	}, new Compound[]{ new Compound(PbClO42),	new Compound(H2) }),
 
 	Fe_3_HClO4		(new Compound[]{ new Compound(Fe3, 2), new Compound(HClO4, 6)}, new Compound[]{ new Compound(Fe$3Cl3, 2),	new Compound(H2, 3) }),
 	Al_HClO4		(new Compound[]{ new Compound(Al, 2), new Compound(HClO4, 6)	}, new Compound[]{ new Compound(AlCl3, 2),	new Compound(H2, 3) }),

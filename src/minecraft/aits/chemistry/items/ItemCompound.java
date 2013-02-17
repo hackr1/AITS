@@ -32,6 +32,8 @@ public class ItemCompound extends ChemistryItem implements ILabEquipment
 {
 	private static final int StdRoomTemp	= 25;
 
+	private static final char s = '\u00A7';
+
 	public static EnumCompoundList[] CompoundList = EnumCompoundList.values();
 
 
@@ -157,9 +159,9 @@ public class ItemCompound extends ChemistryItem implements ILabEquipment
 		{
 			// No components, it's an element
 			list.add(GetReadableCompoundName(Compound) + " - " + GetStateInRoomTemp(Compound).ClassDescription());
-			list.add("¤5" + Compound.GetClassification().ClassDescription() + "¤r");
-			list.add("¤9Protons: ¤r" + Compound.GetAtomicNumber());
-			list.add("¤6Neutrons: ¤r" + Compound.GetNeutronNumber());
+			list.add(s + "5" + Compound.GetClassification().ClassDescription() + s + "r");
+			list.add(s + "9Protons: " + s + "r" + Compound.GetAtomicNumber());
+			list.add(s + "6Neutrons: " + s + "r" + Compound.GetNeutronNumber());
 
 			String colour;
 			String HalfLife;
@@ -171,7 +173,7 @@ public class ItemCompound extends ChemistryItem implements ILabEquipment
 
 			if((ItemCompound.GetRadiationInfo(is, Minecraft.getMinecraft().theWorld)).HalfLife <= 0)
 			{
-				list.add("¤aNot Radioactive¤r");
+				list.add(s + "aNot Radioactive" + s + "r");
 				return;
 			}
 
@@ -187,37 +189,37 @@ public class ItemCompound extends ChemistryItem implements ILabEquipment
 			// required to display values in creative inventory
 
 			if(halflife / 20 >= 2592000)
-				colour = "¤3";
+				colour = s + "3";
 
 			// 10 days
 			else if(halflife / 20 >= 864000)
-				colour = "¤e";
+				colour = s + "e";
 
 			// 1 day
 			else if(halflife / 20 >= 864000)
-				colour = "¤d";
+				colour = s + "d";
 
 			// 1 hour
 			else if(halflife / 20 >= 3600)
-				colour = "¤c";
+				colour = s + "c";
 
 			// 1 minute
 			else if(halflife / 20 >= 60)
-				colour = "¤5";
+				colour = s + "5";
 
 			// <1 minute
 			else
-				colour = "¤4";
+				colour = s + "4";
 
 
 
 			// TODO: Convert seconds to days/hours/minutes
-			list.add("Half-life: " + colour + String.valueOf(halflife / 20) + " seconds¤r");
+			list.add("Half-life: " + colour + String.valueOf(halflife / 20) + " seconds" + s + "r");
 			return;
 		}
 
-		list.add("¤6" + GetReadableCompoundName(Compound) + "¤r - " + "¤a" + RoomState + "¤r");
-		list.add("¤9" + Compound.GetClassification().ClassDescription() + "¤r");
+		list.add(s + "6" + GetReadableCompoundName(Compound) + s + "r - " + s + "a" + RoomState + s + "r");
+		list.add(s + "9" + Compound.GetClassification().ClassDescription() + s + "r");
 	}
 
 	@Override
