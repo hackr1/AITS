@@ -19,14 +19,15 @@ public class BlockSaltOre extends Block {
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setHardness(3.0f);
 	}
-	
+
+	@Override
 	public String getTextureFile()
 	{
-            return CommonProxy.CHEMISTRY_BLOCK_PNG;
+		return CommonProxy.EnumTextureList.ChemistryBlocks.GetPath();
 	}
-	
+
 	//public int idDropped(int par1, Random random, int zero) {
-	//TODO add item drop specifications to chemistry ores	
+	//TODO add item drop specifications to chemistry ores
 	//}
 
 }

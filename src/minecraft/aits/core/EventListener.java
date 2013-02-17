@@ -8,7 +8,7 @@ import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
 
-public class EventLisiner 
+public class EventListener 
 {
 	@ForgeSubscribe
 	public void rightclick(PlayerInteractEvent var1)
