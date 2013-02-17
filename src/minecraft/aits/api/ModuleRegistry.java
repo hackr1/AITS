@@ -13,17 +13,17 @@ import cpw.mods.fml.common.ModContainer;
  * 
  * @author ProPercivalalb
  */
-public class ModuleRegistry
+public class ModuleRegistry 
 {
-
+	
 	public static void findAllModules()
 	{
 		Iterator modules = Loader.instance().getActiveModList().iterator();
-
+		
 		while(modules.hasNext())
 		{
 			ModContainer modContainer = (ModContainer)modules.next();
-
+			
 			if(modContainer.getMod() instanceof IAITSModule)
 			{
 				modContainer.getMetadata().parent = DefaultProps.MOD;
@@ -31,12 +31,11 @@ public class ModuleRegistry
 				module.loadBlocks();
 				module.registerBlocks();
 				module.loadItems();
-				module.registerItems();
 				module.generateOreDictEntries();
 				module.registerCraftingRecipes();
 				module.registerSmeltingRecipes();
 				module.addLocalizations();
-			}
+			}	
 		}
 	}
 }

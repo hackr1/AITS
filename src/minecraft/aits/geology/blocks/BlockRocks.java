@@ -12,75 +12,72 @@ import net.minecraft.item.ItemStack;
 
 public class BlockRocks extends Block
 {
-	/** The type of tree this block came from. */
-	public static final String[] brickType = new String[] {"oak", "spruce", "birch", "jungle", "1", "2", "3"};
+    /** The type of tree this block came from. */
+    public static final String[] brickType = new String[] {"oak", "spruce", "birch", "jungle", "1", "2", "3"};
 
-	public BlockRocks(int par1)
-	{
-		super(par1, 4, Material.rock);
-		this.setCreativeTab(CreativeTabs.tabBlock);
-		this.setHardness(1.5F);
-		this.setResistance(10.0F);
-		this.setStepSound(soundStoneFootstep);
-		this.setBlockName("rockMulti");
-		this.setTextureFile(CommonProxy.EnumTextureList.CoreBlocks.GetPath());
-	}
+    public BlockRocks(int par1)
+    {
+        super(par1, 4, Material.rock);
+        this.setCreativeTab(CreativeTabs.tabBlock);
+        this.setHardness(1.5F);
+        this.setResistance(10.0F);
+        this.setStepSound(soundStoneFootstep);
+        this.setBlockName("rockMulti");
+        this.setTextureFile(CommonProxy.BLOCK_PNG);
+    }
 
-	/**
-	 * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
-	 */
-	@Override
-	public int getBlockTextureFromSideAndMetadata(int par1, int par2)
-	{
-		switch (par2)
-		{
-			case 1:
-				// return 65;
-				return 1;
-			case 2:
-				//  return 66;
-				return 2;
-			case 3:
-				//  return 67;
-				return 3;
-			case 4:
-				// return 68;
-				return 4;
-			case 5:
-				//  return 69;
-				return 5;
-			case 6:
-				//   return 70;
-				return 6;
-			default:
-				//return 64;
-				return 0;
-		}
-	}
+    /**
+     * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+     */
+    public int getBlockTextureFromSideAndMetadata(int par1, int par2)
+    {
+        switch (par2)
+        {
+            case 1:
+               // return 65;
+            	return 1;
+            case 2:
+              //  return 66;
+            	return 2;
+            case 3:
+              //  return 67;
+            	return 3;
+            case 4:
+               // return 68;
+            	return 4;
+            case 5:
+              //  return 69;
+            	return 5;
+            case 6:
+             //   return 70;
+            	return 6;
+            default:
+                //return 64;
+            	return 0;
+        }
+    }
 
-	/**
-	 * Determines the damage on the item the block drops. Used in cloth and wood.
-	 */
-	@Override
-	public int damageDropped(int par1)
-	{
-		return par1;
-	}
+    /**
+     * Determines the damage on the item the block drops. Used in cloth and wood.
+     */
+    public int damageDropped(int par1)
+    {
+        return par1;
+    }
 
-	@Override
-	@SideOnly(Side.CLIENT)
+    @SideOnly(Side.CLIENT)
 
-	/**
-	 * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
-	 */
-	public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
-	{
-		par3List.add(new ItemStack(par1, 1, 0));
-		par3List.add(new ItemStack(par1, 1, 1));
-		par3List.add(new ItemStack(par1, 1, 2));
-		par3List.add(new ItemStack(par1, 1, 3));
-		par3List.add(new ItemStack(par1, 1, 4));
-		par3List.add(new ItemStack(par1, 1, 5));
-		par3List.add(new ItemStack(par1, 1, 6));
-	}
+    /**
+     * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+     */
+    public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
+    {
+        par3List.add(new ItemStack(par1, 1, 0));
+        par3List.add(new ItemStack(par1, 1, 1));
+        par3List.add(new ItemStack(par1, 1, 2));
+        par3List.add(new ItemStack(par1, 1, 3));
+        par3List.add(new ItemStack(par1, 1, 4));
+        par3List.add(new ItemStack(par1, 1, 5));
+        par3List.add(new ItemStack(par1, 1, 6));
+    }
 }

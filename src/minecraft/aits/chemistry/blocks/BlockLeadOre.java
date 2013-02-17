@@ -19,11 +19,10 @@ public class BlockLeadOre extends Block {
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setHardness(2.6f);
 	}
-
-	@Override
+	
 	public String getTextureFile()
 	{
-		return CommonProxy.EnumTextureList.ChemistryBlocks.GetPath();
+            return CommonProxy.CHEMISTRY_BLOCK_PNG;
 	}
 
 }

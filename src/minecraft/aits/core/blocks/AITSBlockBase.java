@@ -5,8 +5,7 @@ import net.minecraft.block.material.Material;
 import aits.core.AITS;
 import aits.core.common.CommonProxy;
 
-public class AITSBlockBase extends Block
-{
+public class AITSBlockBase extends Block {
 
 	public AITSBlockBase(int par1, int par2, Material par3Material) {
 		super(par1, par2, par3Material);
@@ -14,9 +13,7 @@ public class AITSBlockBase extends Block
 		//TEST
 	}
 
-	@Override
-	public String getTextureFile()
-	{
-		return CommonProxy.EnumTextureList.CoreBlocks.GetPath();
+	public String getTextureFile() {
+		return CommonProxy.BLOCK_PNG;
 	}
 }

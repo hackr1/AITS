@@ -12,8 +12,7 @@ public class AITSItemBase extends Item {
 
 	}
 
-	@Override
 	public String getTextureFile() {
-		return CommonProxy.EnumTextureList.CoreItems.GetPath();
+		return CommonProxy.ITEMS_PNG;
 	}
 }

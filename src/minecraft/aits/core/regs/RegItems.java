@@ -3,7 +3,6 @@ package aits.core.regs;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import aits.chemistry.Chemistry;
 import aits.core.AITS;
 import aits.core.items.ItemCoke;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -14,8 +13,7 @@ public class RegItems {
 
 	public static Item	itemCoke = new ItemCoke(RegConfig.ItemIDRange + 0);
 
-	public static void register(FMLInitializationEvent event)
-	{
+	public static void register(FMLInitializationEvent event) {
 		GameRegistry.registerItem(itemCoke,itemCoke.getItemName());
 	}
 

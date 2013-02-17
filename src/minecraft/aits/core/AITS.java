@@ -56,7 +56,7 @@ public class AITS
 		RegCrafting.register(event);
 		RegSmelting.register(event);
 		RegTileEntity.register(event);
-		MinecraftForge.EVENT_BUS.register(new EventListener());
+		MinecraftForge.EVENT_BUS.register(new EventLisiner());
 		NetworkRegistry.instance().registerGuiHandler(this, proxy);
 		// TODO GameRegistry.registerWorldGenerator(this);
 

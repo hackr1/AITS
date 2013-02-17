@@ -19,14 +19,13 @@ public class BlockCarobiiteOre extends Block{
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setHardness(2.5f);
 	}
-
-	@Override
+	
 	public String getTextureFile()
 	{
-		return CommonProxy.EnumTextureList.ChemistryBlocks.GetPath();
+            return CommonProxy.CHEMISTRY_BLOCK_PNG;
 	}
-
+	
 	//public int idDropped(int par1, Random random, int zero) {
-	//TODO add item drop specifications to chemistry ores
+	//TODO add item drop specifications to chemistry ores	
 	//}
 }
