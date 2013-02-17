@@ -16,6 +16,8 @@ temp/*
 forge/*
 src - alt/*
 
+.metadata
+
 Start.java
 !src/minecraft/aits/*
 src/minecraft/cpw/*
