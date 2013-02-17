@@ -34,7 +34,5 @@ public class Compound
 		this.Count = amount;
 		this.Compound = e;
 		this.Charge = Charge;
-
-		// ASDFASDJF
 	}
 }
