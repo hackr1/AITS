@@ -33,27 +33,27 @@ public class Geology implements IAITSModule
 	public static Block tileMulti;
 	public static Block wallTileMulti;
 	public static Block rockCobblestones;
-	
+
 	public static Block blockPeat;
 	public static Block bituminousCoal;
 	public static Block blockAnthracite;
-	
+
 	@Override
-	public void loadBlocks() 
+	public void loadBlocks()
 	{
 		this.stoneBrickMulti = new BlockBricks(450);
 		this.rockMulti = new BlockRocks(451);
 		this.tileMulti = new BlockRockTiles(452);
 		this.wallTileMulti = new BlockWallTiles(453);
 		this.rockCobblestones = new BlockRockCobblestones(454);
-		
+
 		this.blockPeat = new BlockPeat(RegConfig.BlockIDRange + 30, 80).setBlockName("Peat");
 		this.bituminousCoal = new BlockBituminousCoal(RegConfig.BlockIDRange + 31, 81).setBlockName("Bituminous Coal Ore");
 		this.blockAnthracite = new BlockAnthracite(RegConfig.BlockIDRange + 32, 82).setBlockName("Anthracite Ore");
 	}
 
 	@Override
-	public void registerBlocks() 
+	public void registerBlocks()
 	{
 		GameRegistry.registerBlock(this.stoneBrickMulti, ItemMultiBricks.class, "stoneBrickMulti");
 		GameRegistry.registerBlock(this.rockMulti, ItemMultiRocks.class, "rockMulti");
@@ -68,12 +68,12 @@ public class Geology implements IAITSModule
 
 	@Override
 	public void loadItems() {
-		
-		
+
+
 	}
 
 	@Override
-	public void generateOreDictEntries() 
+	public void generateOreDictEntries()
 	{
 
 		OreDictionary.registerOre("blockPeat", new ItemStack(blockPeat));
@@ -83,18 +83,18 @@ public class Geology implements IAITSModule
 
 	@Override
 	public void registerSmeltingRecipes() {
-		
-		
+
+
 	}
 
 	@Override
 	public void registerCraftingRecipes() {
-		
-		
+
+
 	}
 
 	@Override
-	public void addLocalizations() 
+	public void addLocalizations()
 	{
 		LanguageRegistry.addName(new ItemStack(this.stoneBrickMulti, 1, 0), "Slate Brick");
 		LanguageRegistry.addName(new ItemStack(this.stoneBrickMulti, 1, 1), "Limestone Brick");
@@ -103,7 +103,7 @@ public class Geology implements IAITSModule
 		LanguageRegistry.addName(new ItemStack(this.stoneBrickMulti, 1, 4), "Pink Granite Brick");
 		LanguageRegistry.addName(new ItemStack(this.stoneBrickMulti, 1, 5), "Marble Brick");
 		LanguageRegistry.addName(new ItemStack(this.stoneBrickMulti, 1, 6), "Quartzite Brick");
-		
+
 		LanguageRegistry.addName(new ItemStack(this.rockMulti, 1, 0), "Slate");
 		LanguageRegistry.addName(new ItemStack(this.rockMulti, 1, 1), "Limestone");
 		LanguageRegistry.addName(new ItemStack(this.rockMulti, 1, 2), "Basalt");
@@ -111,7 +111,7 @@ public class Geology implements IAITSModule
 		LanguageRegistry.addName(new ItemStack(this.rockMulti, 1, 4), "Pink Granite");
 		LanguageRegistry.addName(new ItemStack(this.rockMulti, 1, 5), "Marble");
 		LanguageRegistry.addName(new ItemStack(this.rockMulti, 1, 6), "Quartzite");
-	
+
 		LanguageRegistry.addName(new ItemStack(this.tileMulti, 1, 0), "Slate Tile");
 		LanguageRegistry.addName(new ItemStack(this.tileMulti, 1, 1), "Limestone Tile");
 		LanguageRegistry.addName(new ItemStack(this.tileMulti, 1, 2), "Basalt Tile");
@@ -140,8 +140,15 @@ public class Geology implements IAITSModule
 		LanguageRegistry.addName(blockPeat, "Peat");
 		LanguageRegistry.addName(blockAnthracite, "Anthracite Ore");
 
-		
 
+
+
+	}
+
+	@Override
+	public void registerItems()
+	{
+		// TODO Auto-generated method stub
 
 	}
 }
