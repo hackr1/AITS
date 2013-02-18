@@ -7,7 +7,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.apache.commons.math3.util.ArithmeticUtils;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.item.EntityItem;
