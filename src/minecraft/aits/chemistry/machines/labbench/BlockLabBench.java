@@ -74,7 +74,7 @@ public class BlockLabBench extends BlockContainer
 				{
 					// TODO:
 					// Fix when field names come out.
-					ei.getEntityItem().setTagCompound((NBTTagCompound)item.getTagCompound().copy());
+					ei.func_92014_d().setTagCompound((NBTTagCompound)item.getTagCompound().copy());
 				}
 
 				float factor = 0.5F;
