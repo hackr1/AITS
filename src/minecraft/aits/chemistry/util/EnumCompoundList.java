@@ -28,6 +28,7 @@ import java.util.List;
 
 
 
+
 public enum EnumCompoundList
 {
 	H				("Hydrogen", NonMetal, 1, 0, -1, +1, -259, -253, false, Stable),
@@ -306,7 +307,7 @@ public enum EnumCompoundList
 
 
 	// Cations
-	iNH4			("Ammonium", +1, Alkaline, new Compound[]{ new Compound(N, Cation), new Compound(H, 4, Anion) }, -300, -300, "", -1, Stable),
+	iNH4			("Ammonium", +1, Anion, new Compound[]{ new Compound(N, Cation), new Compound(H, 4, Anion) }, -300, -300, "", -1, Stable),
 
 
 
@@ -609,8 +610,6 @@ public enum EnumCompoundList
 	private final EnumClassificationList RadState;
 
 
-	public final static EnumCompoundList[] Compounds = values();
-
 	private static String GetColour(EnumClassificationList c)
 	{
 		String hex = "";
@@ -712,7 +711,7 @@ public enum EnumCompoundList
 	}
 
 	// Run-of-the-mill polyatomic compounds.
-	private EnumCompoundList(String name, int IonicCharge, EnumClassificationList classification, Compound[] Components,	int MeltingPoint, int BoilingPoint,
+	private EnumCompoundList(String name, int IonicCharge, EnumClassificationList classification, Compound[] Components, int MeltingPoint, int BoilingPoint,
 					String HexColour, int HalfLife, EnumClassificationList RadState)
 	{
 		this.ShortName = name();

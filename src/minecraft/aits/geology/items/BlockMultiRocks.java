@@ -2,18 +2,19 @@ package aits.geology.items;
 
 import aits.geology.Geology;
 import aits.geology.blocks.BlockBricks;
+import aits.geology.blocks.BlockRocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemMultiBricks extends ItemBlock
+public class BlockMultiRocks extends ItemBlock
 {
-    private final Block theBlock = Geology.stoneBrickMulti;
-    private final String[] names = BlockBricks.brickType;
+    private final Block theBlock = Geology.rockMulti;
+    private final String[] names = BlockRocks.brickType;
 
-    public ItemMultiBricks(int par1)
+    public BlockMultiRocks(int par1)
     {
         super(par1);
         this.setMaxDamage(0);

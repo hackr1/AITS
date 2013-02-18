@@ -9,12 +9,12 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemRockWallTiles extends ItemBlock
+public class BlockMultiRockWallTiles extends ItemBlock
 {
     private final Block theBlock = Geology.wallTileMulti;
     private final String[] names = BlockWallTiles.brickType;
 
-    public ItemRockWallTiles(int par1)
+    public BlockMultiRockWallTiles(int par1)
     {
         super(par1);
         this.setMaxDamage(0);

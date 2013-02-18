@@ -7,6 +7,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.commons.math3.util.ArithmeticUtils;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
@@ -77,52 +79,73 @@ public class LBReactionHelper
 								}
 
 
-								//								String CombinedClass = ItemCompound.GetCompoundFromIS(itemstack).GetClassification().ClassDescription() +
-								//												ItemCompound.GetCompoundFromIS(ReactantStack).GetClassification().ClassDescription();
+								//								String CombinedClass = ItemCompound.GetCompoundFromIS(stack1).GetClassification().ClassDescription() +
+								//												ItemCompound.GetCompoundFromIS(stack2).GetClassification().ClassDescription();
 								//
 								//								if(CombinedClass.contains("AcidAlkali") || CombinedClass.contains("AlkaliAcid"))
 								//								{
 								//									// Neutralisation Reaction.
 								//
-								//									ListR1 = new ArrayList<ICompound>();
-								//									ListR2 = new ArrayList<ICompound>();
 								//
-								//									ListR1.addAll(ItemCompound.GetCompoundFromIS(itemstack).GetComponents());
-								//									ListR2.addAll(ItemCompound.GetCompoundFromIS(ReactantStack).GetComponents());
+								//									System.out.println(">>>>>>>>>>>>>>>>");
 								//
-								//									ListRE1 = SimplifyComponents(ListR1);
-								//									ListRE2 = SimplifyComponents(ListR2);
+								//									List<Compound> ListR1 = new ArrayList<Compound>();
+								//									List<Compound> ListR2 = new ArrayList<Compound>();
 								//
-								//
+								//									ListR1.addAll(ItemCompound.GetCompoundFromIS(stack1).GetComponents());
+								//									ListR2.addAll(ItemCompound.GetCompoundFromIS(stack2).GetComponents());
 								//
 								//									R1Count = 1;
 								//									R2Count = 1;
 								//
 								//
 								//									// Find the cations
-								//									ICompound C1 = FindCation(ListR1);
-								//									ICompound C2 = FindCation(ListR2);
+								//									Compound C1 = FindCation(ListR1);
+								//									Compound C2 = FindCation(ListR2);
 								//
 								//									// Find the anions
-								//									ICompound A1 = FindAnion(ListR1);
-								//									ICompound A2 = FindAnion(ListR2);
+								//									Compound A1 = FindAnion(ListR1);
+								//									Compound A2 = FindAnion(ListR2);
+								//
+								//									boolean flag = false;
+								//									if(C1 == null)
+								//									{
+								//										System.out.println("CationA null");
+								//										flag = true;
+								//									}
+								//									if(C2 == null)
+								//									{
+								//										System.out.println("CationB null");
+								//										flag = true;
+								//									}
+								//									if(A1 == null)
+								//									{
+								//										System.out.println("AnionA null");
+								//										flag = true;
+								//									}
+								//									if(A2 == null)
+								//									{
+								//										System.out.println("AnionB null");
+								//										flag = true;
+								//									}
+								//
+								//									if(flag)
+								//										return;
 								//
 								//									// We gotta make sure the charges are the same...
 								//
-								//									int I1Count = 0;
-								//									int I2Count = 0;
+								//									I1Count = 0;
+								//									I2Count = 0;
 								//
-								//									if(C2.Compound.GetIonicCharge() * C2.Count == (-A1.Compound.GetIonicCharge()) * A1.Count)
+								//									System.out.println(C1.Compound.GetChemName() + A1.Compound.GetChemName() + " + " + C2.Compound.GetChemName() + A2.Compound.GetChemName());
+								//
+								//									if(C2.Compound.GetIonicCharge() * C2.Count == (-A1.Compound.GetIonicCharge()) * A1.Count &&
+								//													(C1.Compound.GetIonicCharge() * C1.Count == (-A2.Compound.GetIonicCharge()) * A2.Count))
 								//									{
 								//										I1Count = 1;
 								//										I2Count = 1;
-								//										ListRE1.set(ListRE1.indexOf(C1), C2);
-								//									}
-								//									if(C1.Compound.GetIonicCharge() * C1.Count == (-A2.Compound.GetIonicCharge()) * A2.Count)
-								//									{
-								//										I1Count = 1;
-								//										I2Count = 1;
-								//										ListRE2.set(ListRE1.indexOf(C2), C1);
+								//										ListR1.set(ListR1.indexOf(C1), C2);
+								//										ListR2.set(ListR1.indexOf(C2), C1);
 								//									}
 								//
 								//									else if(C2.Compound.GetIonicCharge() * C2.Count != (-A1.Compound.GetIonicCharge() * A1.Count) ||
@@ -144,70 +167,140 @@ public class LBReactionHelper
 								//										int lcm1 = RChemHelper.CalculateLCM(C2.Compound.GetIonicCharge() * C2.Count, (-A1.Compound.GetIonicCharge()) * A1.Count);
 								//										int lcm2 = RChemHelper.CalculateLCM(C1.Compound.GetIonicCharge() * C1.Count, (-A2.Compound.GetIonicCharge()) * A2.Count);
 								//
+								//
+								//										System.out.println(" ===== ");
+								//										System.out.println(lcm1 + " - " + String.valueOf(C2.Compound.GetIonicCharge()) + "-" + String.valueOf(C2.Count) + " <=> " + String.valueOf(-A1.Compound.GetIonicCharge()) + "-" + String.valueOf(A1.Count));
+								//										System.out.println(lcm2 + " - " + String.valueOf(C1.Compound.GetIonicCharge()) + "-" + String.valueOf(C1.Count) + " <=> " + String.valueOf(-A2.Compound.GetIonicCharge()) + "-" + String.valueOf(A2.Count));
+								//										System.out.println(" ----- ");
+								//										//										int lcm1 = ArithmeticUtils.lcm(C2.Compound.GetIonicCharge() * C2.Count, (-A1.Compound.GetIonicCharge()) * A1.Count);
+								//										//										int lcm2 = ArithmeticUtils.lcm(C1.Compound.GetIonicCharge() * C1.Count, (-A2.Compound.GetIonicCharge()) * A2.Count);
+								//
+								//										if(lcm1 < 1 || lcm2 < 1)
+								//											continue NextReaction;
+								//
 								//										// 2
 								//										int NeededR1 = (C1.Compound.GetIonicCharge() * C1.Count) / lcm1;
 								//
 								//										// 1
 								//										int NeededR2 = (C2.Compound.GetIonicCharge() * C2.Count) / lcm2;
 								//
-								//										List<ICompound> Input1 = new ArrayList<ICompound>();
-								//										List<ICompound> Input2 = new ArrayList<ICompound>();
+								//										List<Compound> Input1 = new ArrayList<Compound>();
+								//										List<Compound> Input2 = new ArrayList<Compound>();
 								//
-								//										if(NeededR1 <= itemstack.stackSize)
+								//										if(NeededR1 <= stack1.stackSize)
 								//										{
 								//											// make sure that the itemstack is big enough
-								//											itemstack.stackSize -= NeededR1;
+								//											stack1.stackSize -= NeededR1;
 								//											for(int x = 0; x < NeededR1; x++)
 								//											{
-								//												Input1.addAll(ListRE1);
+								//												Input1.addAll(ListR1);
 								//											}
-								//
-								//											// H, H, Br, Br = H, H, Br, Br
-								//											Input1 = SimplifyComponents(Input1);
 								//										}
 								//										else
-								//											continue NextReaction;
-								//
-								//										if(NeededR2 <= ReactantStack.stackSize)
 								//										{
-								//											ReactantStack.stackSize -= NeededR2;
+								//											System.out.println("Stacksize too small for A");
+								//											continue NextReaction;
+								//										}
+								//
+								//										if(NeededR2 <= stack2.stackSize)
+								//										{
+								//											stack2.stackSize -= NeededR2;
 								//											for(int x = 0; x < NeededR2; x++)
 								//											{
-								//												Input2.addAll(ListRE2);
+								//												Input2.addAll(ListR2);
 								//											}
-								//
-								//											// Ba, O, H, O, H = Ba, O, H, O, H
-								//											Input2 = SimplifyComponents(Input2);
 								//										}
 								//										else
+								//										{
+								//											System.out.println("Stacksize too small for B");
 								//											continue NextReaction;
+								//										}
 								//
 								//										// By now, if anything wasn't enough it should have returned.
 								//										// we need to combine the compounds...
 								//
+								//
+								//										// NaOH, NaOH = Na, Na, OH, OH = (Na)2, (OH)2
+								//										// H2SO4      = H2, SO4
 								//										Input1 = CombineCompounds(Input1);
 								//										Input2 = CombineCompounds(Input2);
 								//
-								//										ICompound NC1 = FindCation(Input1);
-								//										ICompound NC2 = FindCation(Input2);
 								//
-								//										ListRE1.clear();
-								//										ListRE2.clear();
+								//										// Swap cations
+								//										// Na2SO4
+								//										// H2(OH)2
 								//
-								//										ListRE1.addAll(Input1);
-								//										ListRE2.addAll(Input2);
+								//
+								//										Compound NC1 = FindCation(Input1);
+								//										Compound NC2 = FindCation(Input2);
+								//
+								//										if(Input1.indexOf(NC1) >= 0)
+								//											Input1.set(Input1.indexOf(NC1), NC2);
+								//
+								//										else
+								//										{
+								//											System.out.println("Did not find CationA");
+								//											continue NextReaction;
+								//										}
+								//
+								//
+								//										if(Input2.indexOf(NC2) >= 0)
+								//											Input2.set(Input2.indexOf(NC2), NC1);
+								//
+								//										else
+								//										{
+								//											System.out.println("Did not find CationB");
+								//											continue NextReaction;
+								//										}
+								//
+								//										// Simplify & Split
+								//										// Na, Na, S, O, O, O, O
+								//										// H, H, O, O, H, H
+								//
+								//										// Sort
+								//										// Na, Na, S, O, O, O, O
+								//										// H, H, H, H, O, O
+								//
+								//										// Find
+								//										// Na2SO4
+								//										// H4O2 --> Fail
+								//										// divide by common factor, 2
+								//										// H2O
+								//
+								//
+								//										ListR1.clear();
+								//										ListR2.clear();
+								//
+								//										ListR1.addAll(Input1);
+								//										ListR2.addAll(Input2);
 								//
 								//										System.out.println(NC1.Compound.GetChemName());
 								//										System.out.println(NC2.Compound.GetChemName());
-								//
-								//										ListRE1.set(ListRE1.indexOf(NC1), NC2);
-								//										ListRE2.set(ListRE2.indexOf(NC2), NC1);
 								//									}
-
-
-
-								// Add the current itemstack and the one below this
-								// as inputs.
+								//
+								//									Compound Result1 = SearchCompoundByComponent(ListR1);
+								//									Compound Result2 = SearchCompoundByComponent(ListR2);
+								//
+								//
+								//									List<Integer> InputSub = new ArrayList<Integer>();
+								//									List<ItemStack> Outputs = new ArrayList<ItemStack>();
+								//
+								//									InputSub.add(I1Count);
+								//									InputSub.add(I2Count);
+								//
+								//									Outputs.add(new ItemStack(Chemistry.CompoundMetaItem, Result1.Count, Result1.Compound.ordinal()));
+								//									Outputs.add(new ItemStack(Chemistry.CompoundMetaItem, Result2.Count, Result2.Compound.ordinal()));
+								//
+								//									PlaceItemsInInv(i, Outputs, InputSub);
+								//
+								//
+								//									System.out.println(">>>>>>>>>>>>>>>>\n\n\n\n");
+								//									continue NextReaction;
+								//
+								//
+								//
+								//									// Add the current itemstack and the one below this
+								//									// as inputs.
 
 
 								NextRecipe:
@@ -239,17 +332,25 @@ public class LBReactionHelper
 
 										PlaceItemsInInv(i, Outputs, InputSub);
 										continue NextReaction;
-
-
 									}
 
-								continue NextReaction;
+								//								String CombinedClass = ItemCompound.GetCompoundFromIS(stack1).GetClassification().ClassDescription() +
+								//												ItemCompound.GetCompoundFromIS(stack2).GetClassification().ClassDescription();
+								//
+								//								// In fact, anything that is a double displacement.
+								//								if(CombinedClass.contains("AcidAlkali") || CombinedClass.contains("AlkaliAcid"))
+								//								{
+								//
+								//								}
+
+								//									continue NextReaction;
 							}
 						}
 					}
 				}
 			}
 	}
+
 
 	private static int FindFreeSlot()
 	{
@@ -359,7 +460,7 @@ public class LBReactionHelper
 		{
 			for(int y = x; y < list.size(); y++)
 			{
-				if(((Compound)list.toArray()[x]).Compound == ((Compound)list.toArray()[y]).Compound)
+				if(list.get(x).Compound == list.get(y).Compound)
 				{
 					list.get(x).Count += list.get(y).Count;
 					list.get(y).Count = 0;
@@ -445,29 +546,31 @@ public class LBReactionHelper
 	{
 		for(Compound c : list)
 		{
-			if(c.Charge == Cation)
+			if(c.Compound.GetIonicCharge() > 0)
 				return c;
 		}
+		System.out.println("No Cation");
 		return null;
 	}
 	public static Compound FindAnion(List<Compound> list)
 	{
 		for(Compound c : list)
 		{
-			if(c.Charge == Anion)
+			if(c.Compound.GetIonicCharge() < 0)
 				return c;
 		}
+		System.out.println("No Anion");
 		return null;
 	}
 
-	public static EnumCompoundList SearchCompoundByComponent(List<Compound> components)
+	public static Compound SearchCompoundByComponent(List<Compound> components)
 	{
 		Collections.sort(components, new RChemHelper.ECompare());
 		List<Integer> cs = new ArrayList<Integer>();
 
 
 		SkipCompound:
-			for(EnumCompoundList c : EnumCompoundList.Compounds)
+			for(EnumCompoundList c : EnumCompoundList.values())
 			{
 				RecursionHelpList.clear();
 				RecursionHelpList.addAll(SplitElements(SimplifyComponents(c.GetComponents())));
@@ -487,7 +590,7 @@ public class LBReactionHelper
 
 
 				RecursionHelpList.clear();
-				return c;
+				return new Compound(c);
 			}
 
 		// try more before giving up..
@@ -495,14 +598,18 @@ public class LBReactionHelper
 		if(DidFailPreviously)
 		{
 			DidFailPreviously = false;
-			return EnumCompoundList.UnknownC;
+			return new Compound(EnumCompoundList.UnknownC);
 		}
 
 		// try to divide everything by a common denominator.
 		List<Integer> counts = new ArrayList<Integer>();
 
 		for(Compound c : components)
+		{
 			counts.add(c.Count);
+			System.out.print(c.Compound.GetChemName());
+		}
+		System.out.print("\n");
 
 		int GCF = RChemHelper.CalculateGCD(Ints.toArray(counts));
 
@@ -510,7 +617,7 @@ public class LBReactionHelper
 			c.Count /= GCF;
 
 		DidFailPreviously = true;
-		return SearchCompoundByComponent(components);
+		return new Compound(SearchCompoundByComponent(components).Compound, GCF);
 	}
 
 	public static EnumCompoundList SearchCompoundByReadableName(String readablename)

@@ -10,12 +10,12 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemRockCobblestones extends ItemBlock
+public class BlockMultiRockCobblestones extends ItemBlock
 {
     private final Block theBlock = Geology.rockCobblestones;
     private final String[] names = BlockRockCobblestones.brickType;
 
-    public ItemRockCobblestones(int par1)
+    public BlockMultiRockCobblestones(int par1)
     {
         super(par1);
         this.setMaxDamage(0);
