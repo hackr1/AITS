@@ -8,10 +8,10 @@ public class Compound
 	public int						Count;
 	public EnumClassificationList	Charge;
 
-	public Compound(EnumCompoundList c, int amount)
+	public Compound(EnumCompoundList ChemicalEnum, int amount)
 	{
 		this.Count = amount;
-		this.Compound = c;
+		this.Compound = ChemicalEnum;
 		this.Charge = UnknownCharge;
 	}
 
