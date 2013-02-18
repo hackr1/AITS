@@ -16,14 +16,14 @@ import net.minecraft.world.World;
 
 public class AITSBlockBloomery extends BlockContainer
 {
-	public AITSBlockBloomery(int par1, Material par2Material)
-	{
-		super(par1, par2Material);
-	}
-	@Override
-	public TileEntity createNewTileEntity(World var1) 
-	{
-		return new TileEntityBloomery();
-	}
+public AITSBlockBloomery(int par1, Material par2Material)
+{
+super(par1, par2Material);
+}
+@Override
+public TileEntity createNewTileEntity(World var1)
+{
+return new TileEntityBloomery();
+}
 
 }

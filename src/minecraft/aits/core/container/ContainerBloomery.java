@@ -50,11 +50,11 @@ public class ContainerBloomery extends Container
     }
 
     /**
-     * Looks for changes made in the container, sends them to every listener.
-     */
+* Looks for changes made in the container, sends them to every listener.
+*/
     public void detectAndSendChanges()
     {
-    	//FIXME this method down there doesn't exist, commented it out for now, please delete if not needed!
+     //FIXME this method down there doesn't exist, commented it out for now, please delete if not needed!
         //super.detectAndSendChanges();
 
         for (int var1 = 0; var1 < this.crafters.size(); ++var1)
@@ -107,8 +107,8 @@ public class ContainerBloomery extends Container
     }
 
     /**
-     * Called when a player shift-clicks on a slot. You must override this or you will crash when someone does that.
-     */
+* Called when a player shift-clicks on a slot. You must override this or you will crash when someone does that.
+*/
     public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2)
     {
         ItemStack var3 = null;
