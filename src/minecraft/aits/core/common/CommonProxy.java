@@ -19,13 +19,18 @@ public class CommonProxy implements IGuiHandler
 {
 	public static enum EnumTextureList
 	{
+		// Core
 		CoreItems					("/aits/textures/metals.png"),
 		CoreBlocks					("/aits/textures/rocks.png"),
 
+		// Chem
 		ChemistryBlocks				("/aits/textures/chemistry/blocks.png"),
 		ChemistryItems				("/aits/textures/chemistry/items.png"),
 		ChemistryCompounds			("/aits/textures/chemistry/CompoundSpriteSheet.png"),
-		ChemistryLabBench			("/aits/textures/chemistry/LabBenchGUI.png");
+		ChemistryLabBench			("/aits/textures/chemistry/LabBenchGUI.png"),
+
+		// Geog
+		RockItems					("/aits/textures/rockitems.png");
 
 
 		private final String path;

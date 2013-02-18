@@ -1,6 +1,7 @@
 package aits.geology;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import aits.api.IAITSModule;
@@ -16,11 +17,12 @@ import aits.geology.blocks.BlockRockCobblestones;
 import aits.geology.blocks.BlockRockTiles;
 import aits.geology.blocks.BlockRocks;
 import aits.geology.blocks.BlockWallTiles;
-import aits.geology.items.ItemMultiBricks;
-import aits.geology.items.ItemMultiRockTiles;
-import aits.geology.items.ItemMultiRocks;
-import aits.geology.items.ItemRockCobblestones;
-import aits.geology.items.ItemRockWallTiles;
+import aits.geology.items.BlockMultiBricks;
+import aits.geology.items.BlockMultiRockTiles;
+import aits.geology.items.BlockMultiRocks;
+import aits.geology.items.BlockMultiRockCobblestones;
+import aits.geology.items.BlockMultiRockWallTiles;
+import aits.geology.items.ItemMultiRock;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -38,6 +40,8 @@ public class Geology implements IAITSModule
 	public static Block bituminousCoal;
 	public static Block blockAnthracite;
 
+	public static Item RockItemMulti;
+
 	@Override
 	public void loadBlocks()
 	{
@@ -50,20 +54,23 @@ public class Geology implements IAITSModule
 		this.blockPeat = new BlockPeat(RegConfig.BlockIDRange + 30, 80).setBlockName("Peat");
 		this.bituminousCoal = new BlockBituminousCoal(RegConfig.BlockIDRange + 31, 81).setBlockName("Bituminous Coal Ore");
 		this.blockAnthracite = new BlockAnthracite(RegConfig.BlockIDRange + 32, 82).setBlockName("Anthracite Ore");
+
+		this.RockItemMulti = new ItemMultiRock(RegConfig.ItemIDRange + 2);
 	}
 
 	@Override
 	public void registerBlocks()
 	{
-		GameRegistry.registerBlock(this.stoneBrickMulti, ItemMultiBricks.class, "stoneBrickMulti");
-		GameRegistry.registerBlock(this.rockMulti, ItemMultiRocks.class, "rockMulti");
-		GameRegistry.registerBlock(this.tileMulti, ItemMultiRockTiles.class, "rockTiles");
-		GameRegistry.registerBlock(this.wallTileMulti, ItemRockWallTiles.class, "rockWallTiles");
-		GameRegistry.registerBlock(this.rockCobblestones, ItemRockCobblestones.class, "rockCobblestones");
+		GameRegistry.registerBlock(this.stoneBrickMulti, BlockMultiBricks.class, "stoneBrickMulti");
+		GameRegistry.registerBlock(this.rockMulti, BlockMultiRocks.class, "rockMulti");
+		GameRegistry.registerBlock(this.tileMulti, BlockMultiRockTiles.class, "rockTiles");
+		GameRegistry.registerBlock(this.wallTileMulti, BlockMultiRockWallTiles.class, "rockWallTiles");
+		GameRegistry.registerBlock(this.rockCobblestones, BlockMultiRockCobblestones.class, "rockCobblestones");
 
 		GameRegistry.registerBlock(blockPeat, "blockPeat");
 		GameRegistry.registerBlock(blockAnthracite, "blockAnthracite");
 		GameRegistry.registerBlock(bituminousCoal, "bituminousCoal");
+
 	}
 
 	@Override
@@ -141,14 +148,34 @@ public class Geology implements IAITSModule
 		LanguageRegistry.addName(blockAnthracite, "Anthracite Ore");
 
 
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 0), "Slate Rock");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 1), "Limestone Rock");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 2), "Basalt Rock");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 3), "Granite Rock");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 4), "Pink Granite Rock");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 5), "Marble Rock");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 6), "Quartzite Rock");
 
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 7), "Sharp Slate Rock");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 8), "Sharp Limestone Rock");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 9), "Sharp Basalt Rock");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 10), "Sharp Granite Rock");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 11), "Sharp Pink Granite Rock");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 12), "Sharp Marble Rock");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 13), "Sharp Quartzite Rock");
 
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 14), "Slate Rock Racloir");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 15), "Limestone Rock Racloir");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 16), "Basalt Rock Racloir");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 17), "Granite Rock Racloir");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 18), "Pink Granite Rock Racloir");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 19), "Marble Rock Racloir");
+		LanguageRegistry.addName(new ItemStack(this.RockItemMulti, 1, 20), "Quartzite Rock Racloir");
 	}
 
 	@Override
 	public void registerItems()
 	{
-		// TODO Auto-generated method stub
-
+		GameRegistry.registerItem(this.RockItemMulti, "RockItemMulti");
 	}
 }

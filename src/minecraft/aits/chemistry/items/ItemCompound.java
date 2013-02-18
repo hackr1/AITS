@@ -30,9 +30,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemCompound extends ChemistryItem implements ILabEquipment
 {
-	private static final int StdRoomTemp	= 25;
-
-	private static final char s = '\u00A7';
+	protected static final int StdRoomTemp	= 25;
+	protected static final char s = '\u00A7';
 
 	public static EnumCompoundList[] CompoundList = EnumCompoundList.values();
 
